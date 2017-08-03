@@ -1,11 +1,11 @@
 #include "obliv.oh"
 #include "obliv.h"
 
-#define myint short
-#define feedOblivMyintArray feedOblivShortArray
+#define myint int
+#define feedOblivMyintArray feedOblivIntArray
 
 void circuit(void *_arg) {
-    size_t k = 250;
+    size_t k = 101;
     myint *array = calloc(k, sizeof(myint));
     obliv myint *obliv_array = malloc(k * sizeof(obliv myint));
     feedOblivMyintArray(obliv_array, array, k, 2);
