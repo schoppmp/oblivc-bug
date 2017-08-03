@@ -19,9 +19,9 @@ int main(int argc, char** argv) {
     printf("sizeof(int) is %zd\n", sizeof(int));
     ProtocolDesc pd;
     if(party == 1) {
-        protocolConnectTcp2P(&pd,"localhost", "23456");
-    } else {
         protocolAcceptTcp2P(&pd, "23456");
+    } else {
+        protocolConnectTcp2P(&pd,"localhost", "23456");
     }
     setCurrentParty(&pd, party);
     execYaoProtocol(&pd, circuit, NULL);
