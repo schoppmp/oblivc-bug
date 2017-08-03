@@ -1,4 +1,8 @@
 
+.PHONY: run
+run: test
+	./test 0 & ./test 1
+
 test: test.c obliv-c/_build/libobliv.a
 	obliv-c/bin/oblivcc -o $@ $^
 
